@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>User Page</title>
+    </head>
+
+    <body>
+        <p id="welcomeMessage">Welcome</p>
+        <p id="firstName">First Name: </p>
+        <p id="lastName">Last Name: </p>
+
+        <script>
+            const url = new URLSearchParams(location.search);
+
+            document.getElementById("welcomeMessage").innerHTML = "<h2>Welcome "+url.get("firstName")+"! Here are all of your details:</h2>";
+            document.getElementById("firstName").innerHTML = "First Name: "+url.get("firstName");
+            document.getElementById("lastName").innerHTML = "Last Name: "+url.get("lastName");
+        </script>
+    </body>
+
+</html>
